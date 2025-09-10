@@ -1,0 +1,10 @@
+ol {
+	list-style-type: upper-roman;
+	border: 2px solid blue;
+}
+
+ul {
+	background-color: red;
+	color: yellow; list-style-type: circle;
+}
+
