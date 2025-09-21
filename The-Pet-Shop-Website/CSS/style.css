@@ -1,0 +1,310 @@
+/* Import link for the Roboto font from fonts.google.com */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Import link for the Mukta font from fonts.google.com */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: WHITE;
+    overflow-x: hidden; /* Hides the bottom left right scroll bar
+    when element stretchs beyond the screen boarder */
+}
+
+/* NAVBAR */
+li{
+    display: inline;
+    padding: 5px;
+}
+
+a{
+    font-family: 'Roboto', sans-serif; /* Font from fonts.google.com*/
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 1px .5px 4px rgb (47, 31, 31, 0.5); 
+    color: white;
+    text-decoration: none; /* Removes the underline from links */;
+}
+
+a:hover{ /* Changes the link color when mouse hovers over it */
+    color: #D7EAF7;
+    transition: 0.3s; /* Smooth transition for the color change */}
+
+.navbar{
+    background-color: #216391;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* The following minus margins stretch the navbar background
+    beyond the web browsers screen edge */ 
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-right: -10px;
+    position: sticky; /* Creates a sticky element
+    that stays in the same spot in the browser screen */
+    top: 0; /* Tells the browser to stick the element at the top of the 
+    page based on user scrolling  */
+    z-index: 9;
+}
+
+/* Creates a line under home and contact links to separate
+them from the image links */
+
+#nav-border{
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ffffff;
+}
+
+/* Headers */
+h1, h2, h3{
+    font-family: 'Mukta', sans-serif; /* Font from fonts.google.com*/
+    color: #0a3f63;
+    text-align: center;
+    text-shadow: 1px .5px 4px rgba(0, 0, 0, 0.5); 
+    margin: 0px;
+}
+
+h1{
+    font-size: 60px;
+    margin-top: 50px;
+}
+
+h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#contact-h3{
+    text-shadow: none;
+}
+
+/* Creates a text color change animation on h1 tags (headers for the home & contact page) */
+@keyframes color-text{
+    0%{color: #b5e1ff;}
+    100%{color: #0a3f63;}
+}
+
+/* Calls the animation by its name in CSS selector so it can be applied
+to specific HTML elements */
+
+.animate-text{
+    animation: color-text 4s;
+}
+
+/*Body Content*/
+
+img{
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 
+    0 6px 20px 0 rgba(0, 0, 0, 19);
+}
+
+.column{
+    float: left;
+    width: 48%; /* Places imgs side by side when the float property is used*/
+    padding: 10px
+}
+
+/* Groups elements in a div element together and forces any floating elements
+outside of the div under it with this class selector */
+
+.container{
+    background-size: 100% !important;
+    margin: 0px -60px 50px -40px;
+    padding-top: 5px; /* Padding adds an incline space so the elements don't 
+    sit on the edge of the div */
+    padding-bottom: 10px;
+}
+
+/* Part of the .container class to formate the elements to display in a table
+like format */
+.container::after{
+    content: "";
+    clear: both; /* Clears the floating elements so they don't overlap
+    other elements */
+    display: table;
+}
+
+/* Sets up the size of each div that holds an image so image can be centered */
+.image-container{
+    position: relative;
+    width: 500px;
+    margin-bottom: 50px;
+    margin: auto; /* Centers the div element in the middle of the page */
+}
+
+/* Sets different background colors  in each div with an image and specifies which
+ones by the use of the id names for each image */
+#cat{
+    background-color: #D7EAF7;
+}
+
+#dog{
+    background-color: #c3e0c5;
+}
+
+#rabbit{
+    background-color: #c3e0c5;
+}
+
+#guineapig{
+    background-color: #D7EAF7;
+}
+
+#fish{
+    background-color: #D7EAF7;
+}
+
+
+#reptile{
+    background-color: #c3e0c5;
+}
+
+
+/* Sets up the properties for the overlay on each image */
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 350px;
+    width: 500px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0);
+    opacity: 0.6;
+}
+
+.overlay:hover{ 
+   opacity: 0.6;
+
+}
+
+/* This selector targets the video on the page */
+iframe{
+    display: table;
+    margin: auto; /* Centers the video in the middle of the page */
+    border: none;
+}
+
+/* Syles div element that holds the video */
+#video{
+    background-color: #c3e0c5;
+    padding-top: 5px; /* Padding adds an inline space so the elements don't sit on the edge of div */
+    padding-bottom: 50px;
+}
+
+footer{
+    background-color: #216391;
+    margin-top: 50px;
+    /* Negative margins stretch the footer background beyond the web browsers screen edge */
+    margin-left: -10px;
+    margin-right: -10px;
+    bottom: 0;
+}
+
+
+/* Styles table elements within the footer tags */
+
+table{
+    width: 100%;
+}
+
+td{
+    text-align: center;
+    width: 33%; /* Divide 3 columns equally */
+}
+
+/* Styles paragraph elements within the table data tags */
+td p{
+    font-family: 'Roboto', sans-serif; /* Font from fonts.google.com*/
+    color: rgb(255, 255, 255);
+}
+
+/* Form CSS */
+form{
+    padding: 15px;
+    display: table;
+    margin: auto;
+}
+
+
+input{
+    border: 2px solid rgb(165,165,165);
+    border-radius: 2px;
+    padding: 1px;
+    margin: 10px 15px 10px 0px;
+    font-size: 20px;
+    color: rgb(165,165,165);
+    transition: color 0.3s ease-out; /* Smooth transition for the color change */
+}
+
+/* The :focus pseudo-class is triggered when a user clicks on an imput field */
+input:focus{
+    box-sizing: border-box; /* Ensures that padding and border are included in the total width and height of the element */
+    border: 2px solid #0a3f63;
+    color: #000000;
+    transition: 0.3s ease-in; /* Smooth transition for the color change */
+    outline: none; /* Removes the blue outline that appears around an input field when it is clicked on */  
+}
+
+/* Styles label tag on the contact form */
+label{
+    font-family: 'Roboto', sans-serif; /* Font from fonts.google.com*/
+    font-size: 20px;
+    margin: 10px;
+}
+
+
+/* Type selector for the textarea element for user to write msg */  
+textarea{
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box; /* Ensures that padding and border are included in the total width and height of the element */
+    border: 3px solid rgb(165,165,165);
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif; /* Font from fonts.google.com*/
+    font-size: 15px;
+    color: rgb(165,165,165);
+    resize: both; /* Allows the user to resize the textarea both vertically and horizontally */
+    transition: color 0.3s ease-out; /* Smooth transition for the color change */   
+}
+
+/* Applies different styling to textarea element when user clicks on it */
+textarea:focus{
+    box-sizing: border-box; /* Ensures that padding and border are included in the total width and height of the element */
+    border: 3px solid #0a3f63;
+    color: #000000;
+    transition: 0.3s ease-in; /* Smooth transition for the color change */
+    outline: none; /* Removes the blue outline that appears around an input field when it is clicked on */  
+}
+
+/* Styles submiut button on the contact form */
+input[type="submit"]{
+    background-color: #0a3f63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif; /* Font from fonts.google.com*/
+    font-size: 20px;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer; /* Changes the mouse cursor to a pointer when hovering over the button */
+    float: right
+}
+
+/* Changes the button color when mouse hovers over it */
+input[type="submit"]:hover{ /* Changes the button color when mouse hovers over it */
+    background-color: #052133;
+}   

@@ -5,10 +5,11 @@
         <meta charset="UTF-8">
         <meta name="description" content="Contact Us">
         <meta name="author" content="Alison Liguori">
+         <link rel="stylesheet" href="CSS/style.css">
     </head>
-    <body>
+    <body> 
         <!--NAVBAR-->
-        <nav>
+        <nav class="navbar">
             <ul>
                 <li> <a href="index.html"> Home </a></li>
                 <li> <a href="contact.html"> Contact </a></li>
@@ -17,7 +18,9 @@
                 <!--HEADER-->
         <header> 
             <div>
-                <h1> Contact Us!</h1>
+                <h3 id="contact-h3">   
+                </h3> 
+                <h1 class="animate-text"> Contact Us!</h1>
             </div>
         <!--FORM-->
         <section>
@@ -27,10 +30,10 @@
                     <form>
                         <input type="text" name="name" placeholder="First Name"> 
                         <input type="text" name="name" placeholder="Last Name"> <br>
-                        <input type="email" name="email" placeholder="Email Address"> <br>
+                        <input type="email" name="email" placeholder="Email Address"> 
                         <input type="tel" name="phone" placeholder="Phone Number"> <br>
                         <input type="checkbox" name="News Letter"> 
-                        <label for="News Letter"> Would you like to receive our monthly newsletter? </label> 
+                        <label for="News Letter"> Would you like to receive our monthly newsletter? </label> <br>
                         <textarea placeholder="Type message here..."> </textarea> <br>
                         <input type="submit" value="Submit">
                     </form>
@@ -42,7 +45,9 @@
         <footer>
             <table>
                 <tr>
+                <td>
                     <p>The Pet Shop! &copy;</p>
+                </td>
                 </tr>
                 <td> 
                     <p> 123 Square Ave </p>
