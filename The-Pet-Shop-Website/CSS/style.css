@@ -180,7 +180,7 @@ ones by the use of the id names for each image */
     margin-top: 50px;
     border-radius: 10px;
     background-color: rgba(0, 0, 0);
-    opacity: 0.6;
+    opacity: 0;
 }
 
 .overlay:hover{ 
