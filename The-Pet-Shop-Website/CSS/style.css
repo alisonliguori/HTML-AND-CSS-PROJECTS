@@ -184,7 +184,7 @@ ones by the use of the id names for each image */
 }
 
 .overlay:hover{ 
-   opacity: 0.6;
+   opacity: 0;
 
 }
 
