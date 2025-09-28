@@ -175,12 +175,16 @@ ones by the use of the id names for each image */
     bottom: 0;
     left: 0;
     right: 0;
-    height: 350px;
-    width: 500px;
-    margin-top: 50px;
-    border-radius: 10px;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0);
     opacity: 0;
+}
+
+.image-container:hover {
+    width: 100%; /* Ensures the image container stays the same size when hovered over */
+    height: 100%;   
+    display:block;
 }
 
 .overlay:hover{ 
