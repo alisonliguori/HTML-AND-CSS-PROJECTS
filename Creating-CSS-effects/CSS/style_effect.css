@@ -18,6 +18,20 @@ ul{
     align-items: center; /* Vertically centers the list items */
 }
 
+h1, h2{
+    text-align: center;
+}
+
+h1:hover {
+  background-color: blue;
+  color: white;
+}
+
+h2:hover {
+  background-color: lightgreen;
+  color: rgb(41, 191, 240);
+}
+
 a{
     display:block;
     font-family: Calibri, sans-serif;
@@ -56,4 +70,159 @@ a:hover, .dropdown:hover:hover{
 /* Displays the dropdown menu when hovering over the parent list item (images link) */
 .dropdown:hover .rollover-menu {
     display: block;
+}
+
+
+/* Styles the anchor links within the div tag that contains the rollover-menu class selector */
+.rollover-menu a{
+    color: #363636;
+}
+
+/* Rollover effect for the anchor links within the dropdown menu when hovering*/
+.rollover-menu a:hover{
+    background-color: white; /* Changes background color on hover */
+}
+
+/* Styles 1st anchor element child within the rollover-menu div tag */
+.rollover-menu a:hover:nth-child(1){
+    background-color: rgb(117, 20, 20); /* Changes text color on hover */
+}
+
+/* Styles 2nd anchor element child within the rollover-menu div tag */
+.rollover-menu a:hover:nth-child(2){
+    background-color: rgb(87,7,7); /* Changes text color on hover */
+}
+
+/* Styles 3rd anchor element child within the rollover-menu div tag */
+.rollover-menu a:hover:nth-child(3){
+    background-color: rgb(48,2,2); /* Changes text color on hover */
+}
+
+/* FOOTER */
+footer{
+    background-color: #363636;
+    margin: 30px -10px -10px -10px; /* Margin value order: top,right, 
+    bottom, and left */
+    overflow: hidden; /* Hides exess margin space expanding past the 
+    browser window edge and prevents a left ot right scroll bar*/   
+    height: 70px;
+}
+
+/* Styles the text within the footer */
+.footer-text{
+    font-family: Calibri, sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: rgb(228,159,0);
+    text-align: center;
+}
+
+/* Images Section */
+img{
+    width: 700px;
+    height: 550px;
+}
+
+/* Creates a container for the image its held in*/
+.image-container{
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    padding-top: 120px;
+}
+
+/* Creates a uniform amount of space (as the other 2 images on the 
+screen) from the navbar to the top of the image when the bookmark link
+is clicked on */
+
+#image3{
+    padding-bottom: 170px;
+}
+
+/* Image 1 */
+/* Overlays a dark grey color over the 1st image */
+.overlay{
+    position: absolute; 
+    width: 700px;
+    height: 550px;
+    background-color: rgb(90, 90, 90);  
+    opacity: 0; /* Sets the transparency level of the overlay color */
+    transition: 0.5s ease; /* Sets the duration of the hover effect */
+}
+
+/* Triggers the hover effect when the mouse pointer is over the overlay on Image 1 with a 60% opacity   */
+.overlay:hover{
+    opacity: 0.6; /* Increases the opacity of the overlay color on hover */
+}
+
+/* Image 2 */
+.zoom{
+    transform: scale(1); /* Sets the initial scale of the image. zoom in effect Can do 2 #s (x,y) */
+    transition: 0.5s ease-out; /* Sets the duration of the hover effect */
+    z-index: 3; /* Sets the position of the image in the stack layer behind navbar so zoom effect
+    doesn't cover the nav bar */
+
+}
+
+.zoom:hover{
+    transform: scale(1.5); /* Increases the scale of the image on hover ny half its size*/
+    transition: 0.5s ease-out; /* Sets the duration of the hover effect */
+}
+
+/* Image 3 */
+/* Creates the position of the animation burst and hides any overflow of the shape size
+going beyond the edges of image 3 */
+.circle{
+    position: relative;
+    margin: 0px;
+    overflow: hidden; /* Hides any overflow of the shape size going beyond the edges of image 3 */
+}
+
+/* Sets burst animation shape and position before hover effect is triggered */
+.circle::before{
+    content: ""; /* Inserts an empty content before the element */
+    width: 0;
+    height: 0;
+    border-radius: 50%; /* Creates a circular shape */
+    opacity: 0; /* Makes shape invisible until animation is triggered by a hover effect*/
+    position: absolute;
+    top: 50%; /* Positions the shape vertically at the center of the image */
+    left: 50%; /* Positions the shape horizontally at the center of the image */
+    transform: translate(-50%, -50%); /* CentSSSers the shape by moving it up and left by 50% of its own size */
+    animation: burst-reverse 1s; /* Calls the burst-reverse animation and sets its duration to 0.7 seconds */
+}
+
+
+/* Triggers hover effect on the circle class selector ::before*/
+/* Creates a growing circle effect */
+.circle:hover::before{
+    animation: burst 1s; /* Calls the burst animation */;
+    animation-fill-mode: forwards; /* Calls the burst animation and sets its duration to 0.7 seconds */
+}
+@keyframes burst{ 
+    0%{ /* 0% is the starting point of  the animation */
+        opacity: 0.2;
+        background-color: rgb(224,224,224);
+    }
+    100%{ /* 100% is the end point of the animation */
+        width: 300%; /* Sets the final width of the circle */
+        height: 300%; /* Sets the final height of the circle */
+        background-color: rgb(224,224,224);
+        opacity: 0.7; /* Makes shape invisible at the end of the animation */
+    }
+} 
+
+/* Opposite of the burst animation. Animation of the circle shrinking back to the center of the image */
+@keyframes burst-reverse{
+    0%{
+        width: 300%;
+        height: 300%;
+        background-color: rgb(224,224,224);
+        opacity: 0.7;
+    }
+    100%{
+        width: 0;
+        height: 0;
+        background-color: rgb(224,224,224);
+        opacity: 0.2;
+    }
 }

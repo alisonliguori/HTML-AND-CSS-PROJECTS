@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Creating Effects with CSS </title>
-        <link rel="stylesheet" href="CSS/style_effect.css">
-    </head>
-    <body>
-<!-- Nav Bar -->
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">Home</a> <!-- # means it will take user back to top of the pg -->
-                </li>
-                <li class="dropdown">
-                    <a href="#">Images</a>
-                    <div class="rollover-menu">
-                        <a href="#image1">Image 1</a>
-                        <a href="#image2">Image 2</a>
-                        <a href="#image3">Image 3</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-        <!--Images-->
-        <section>
-            <!--Image 1-->
-            <div id="image1">   
-                <img src="images/yos.jpg" alt="Image 1">
-            </div>
-            <!--Image 2-->
-            <div id="image2">  
-                <img src="images/yell.jpg" alt="Image 2">
-            </div>
-            <!--Image 2-->
-            <div id="image3">  
-                <img src="images/acad.jpg" alt="Image 3">
-            </div>
-        </section>
-        <!--Footer-->
-        <footer>
-            <div>
-                <p> The Tech Academy &copy; </p>
-            </div>
-        </footer>    
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Creating Effects with CSS </title>
+    <link rel="stylesheet" href="CSS/style_effect.css">
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Home</a> <!-- # means it will take user back to top of the pg -->
+            </li>
+            <li class="dropdown">
+                <a href="#">Images</a>
+                <div class="rollover-menu">
+                    <a href="#image1">Image 1</a>
+                    <a href="#image2">Image 2</a>
+                    <a href="#image3">Image 3</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <h1> Creating CSS Effects </h1>
+    <h2> I love national parks! </h2>
+    <!--Images-->
+    <section>
+        <!--Image 1-->
+        <div class="image-container" id="image1">
+            <img src="images/yos.jpg" alt="Image 1">
+            <div class="overlay"> </div>
+        </div>
+        <!--Image 2-->
+        <div class="image-container" id="image2">
+            <img src="images/yell.jpg" alt="Image 2" class="zoom">
+        </div>
+        <!--Image 3-->
+        <div class="image-container" id="image3">
+            <div class="circle"> 
+            <img src="images/acad.jpg" alt="Image 3">
+        </div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <div class="footer-text">
+            <p> The Tech Academy &copy; </p>
+        </div>
+    </footer>
+</body>
+
 </html>
