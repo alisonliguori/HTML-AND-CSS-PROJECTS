@@ -43,7 +43,7 @@ a{
     width: 100px;
     padding: 20px;
     text-decoration: none;
-    transition: background-color 0.3 ease-in;
+    transition: background-color 0.3s ease-in;
     display:block; /* Displays anchor elements vertically on a new line, this
     was added so drop down menu displays vertically instead of horizontally */
 }
@@ -55,7 +55,7 @@ a:hover, .drop:hover a:only-of-type{ /* only-of-type effects the only child nest
     background-color: rgb(72, 172, 157);
     color:white;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
-    transition: background-color 0.3 ease-in;
+    transition: background-color 0.3s ease-in;
 }
 
 .rollover-menu{
@@ -415,7 +415,7 @@ form input{
     border-radius: 5px;
     padding: 3px;
     margin: 10px 15px 10px 0px;
-    transition: 0.3 ease-out; /* Transitions back to light grey when user
+    transition: 0.3s ease-out; /* Transitions back to light grey when user
     clicks away from input field */
 }
 
@@ -424,12 +424,12 @@ form input:focus{
     color: black;
     outline: none; /* Removes default border added when the focus
     pseudo class is triggered */
-    transition: 0.3 ease-out;
+    transition: 0.3s ease-out;
 }
 
 label{
     font-family: "Josefin Slab", serif; /* Font from fonts.google.com */
-    font: size 20px;
+    font-size: 20px;
     font-weight: bold;
     margin:10px;
 }
