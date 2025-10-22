@@ -1,0 +1,249 @@
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: cadetblue;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  font-size: 70px;
+  height:100px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: darkcyan;
+  color:rgb(0, 62, 62);
+}
+
+
+
+/* Centering Image Challenge */
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid lightskyblue;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 85px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 75px;
+    color: rgb(61, 61, 255);
+}
+
+h5 {
+    text-align: center;
+    font-size: 50px;
+}
+
+
+#turtle {
+    filter: drop-shadow(16px 16px 20px black);
+}
+
+.other {
+    margin: auto;
+    width: 50%;
+    border: 3px solid blue;
+    padding: 10px;
+    text-align: center;
+}
+
+#semi{ 
+    border: 2px solid orange;
+    padding: 10px;
+    border-radius: 35px;
+}
+
+p{
+  font-size: 40px;
+  text-align: center;
+  color:rgb(0, 0, 48);
+}
+
+/* Table Challenge */
+th {
+  padding-top: 20px;
+  padding-bottom: 20x;
+  text-align: center;
+  background-color: lightskyblue;
+  color: white;
+  font-size: 75px;
+}
+
+table, th, td {
+  border: 1px solid;
+  border-color: aquas;
+  text-align: center;
+  font-size: 50px;
+}
+
+/* Contact Form Challenge */
+
+form {
+  border-radius: 5px;
+  background-color: lightblue;
+  padding: 20px;
+}
+
+label {display: block;}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid darkcyan;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: darkcyan;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Column Challenge */
+*{
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-style: solid;
+  border:3px solid rgb(217, 217, 254);
+  min-height: 500px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+
+/* Footer Challenge */
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: lightseagreen;
+    color: white;
+}
+
+p.thick {
+  font-weight: bold;
+  color:rgb(0, 0, 48);
+}
+
+/* Text on Photo Challenge */
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color:navy;
+  padding:5px;
+  font-size: 40px;
+  z-index: 2;
+}
+.container {
+  position: relative;
+  width:100%;
+  text-align: center;
+  margin:auto;
+}
+
+.fiddle{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width:1250px;
+    height:auto;
+}
+
+.container p {
+  color:darkblue!important;
+}
+
+p:hover {
+  background-color: rgb(101, 196, 255);
+  font-size: 50px;
+}
+
+/* Image overlay challenge */
+/* Container code above */
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 800px; /* or 100% for responsive */
+  margin: auto;
+}
