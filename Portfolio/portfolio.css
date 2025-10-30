@@ -1,0 +1,358 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+/* League Spartan */
+
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {}
+
+
+
+/* Adjust styles for smaller screens here */
+.container {
+    flex-direction: column;
+}
+
+
+
+/* Adjust styles for larger screens here */
+.container {
+    flex-direction: row;
+
+}
+
+p {
+    font-family: "League Spartan", sans-serif;
+}
+
+html {
+    font-family: 'League Spartan';
+    scroll-behavior: smooth;
+    /* Creates a smooth scrolling effect 
+    when a bookmark link is clicked */
+}
+
+* {
+    text-decoration: none;
+}
+
+
+/*NavBar*/
+
+
+/* NAVBAR */
+.nav-bar li {
+    font-size: clamp(1rem, 2.5vw, 1.6rem);
+}
+
+.nav-bar {
+    position: sticky;
+    /* Creates a sticky element that stays in 
+    the same spot in the browser screen */
+    top: 0;
+    /*Tells the browser to stick the element at the top of 
+    the page based on user scrolling */
+    z-index: 9;
+    /* Sets the stack layer of the navbar to scroll over 
+    all elements */
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+ul {
+    display: flex;
+    /* Creates a flex container which will expand or 
+    shrink elements to fill the space avalible to them and place the 
+    elements side by side horizontally */
+    list-style-type: none;
+    /* Removes default styling for ul elements */
+    align-items: center;
+    margin: -8px -8px 0px -8px;
+    /* Margin order is top, right, bottom, and
+    left. The negative margins will stretch the background beyond the edge 
+    the browser screen */
+    background-color: #9b8493;
+    border-bottom: 5px solid #9aaebb;
+}
+
+li,
+a {
+    font-family: "Josefin Slab", serif;
+    /* Font from fonts.google.com */
+    font-size: 60px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    width: 600px;
+    padding: 45px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in;
+    display: block;
+    /* Displays anchor elements vertically on a new line, this
+    was added so drop down menu displays vertically instead of horizontally */
+}
+
+a:hover,
+.drop:hover a:only-of-type {
+    /* only-of-type effects the only child nested 
+    within an element.  This will keep the background color blue while hovering and 
+    the text white when we move the mouse over anchor elements in the rollover-menu 
+    div*/
+    background-color: #9aaebb;
+    color: white;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease-in;
+}
+
+
+/* Quote */
+.quotecontainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Fullscreen background image */
+.backgroundimg {
+    background-image: url(../Images/tern.JPG);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+/* Quote at top-left */
+.quote-top {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    max-width: 1200px;
+    font-size: clamp(2rem, 2.2vw, 3.5rem);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    font-style: italic;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* About section at bottom of photo */
+.about-section {
+    position: absolute;
+    bottom: 125px;
+    right: 150px;
+    max-width: 1500px;
+    font-size: clamp(2rem, 2.5vw, 3.5rem);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.info{
+    position: absolute;
+    bottom: 125px;
+    left: 150px;
+    max-width: 1500px;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+/* Image hover effects */
+.container {
+    position: relative;
+    width: 50%;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #b2d1e6;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+a,
+h4 {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+    font-size: 80px;
+    width: 100%;
+}
+
+
+/* Contact */
+h3,
+h5 {
+    text-align: center;
+}
+
+#contact {
+    display: block;
+    margin-bottom: 70px;
+}
+
+.contact {
+    display: block;
+    margin-bottom: 70px;
+    font-size: 70px;
+}
+
+form {
+    display: table;
+    /* This will display the form in a table format
+    as rows and columns */
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Browser will auto calculate margins to center the form on the screen */
+    font-size: 100px;
+}
+
+/* Targets the input tags that are nested within the form tags */
+form input {
+    font-size: 15px;
+    color: lightblue;
+    border: 2px solid rgb(165, 165, 165);
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px 15px 10px 0px;
+    transition: 0.3s ease-out;
+    /* Transitions back to light grey when user
+    clicks away from input field */
+}
+
+form input:focus {
+    border: 2px solid lightpink;
+    color: black;
+    outline: none;
+    /* Removes default border added when the focus
+    pseudo class is triggered */
+    transition: 0.3s ease-out;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    resize: both;
+    /* Allows user to resize both width and height in text area */
+    border: 3px solid rgb(165, 165, 165);
+    border-radius: 5px;
+    color: rgb(165, 165, 165);
+    font-size: 15px;
+    transition: 0.3s ease-out;
+    /* Will transition back to light grey */
+}
+
+textarea:focus {
+    color: black;
+    border: 3px solid rgb(100, 191, 222);
+    transition: 0.3s ease-out;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: pink;
+    border: none;
+    border-radius: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px;
+    color: #fff;
+    float: right;
+    /* Positions the submit button to the bottom right of the 
+    form */
+}
+
+input[type="submit"]:hover {
+    background-color: #9b8493;
+}
+
+/* Footer */
+footer {
+    align-items: center;
+    /* Will align nested HTML elements in the center. 
+    ex table data and paragraph elements in the footer tag */
+    margin: 0px -8px -8px -8px;
+    /* (margin: top right bottom left) Stretches the footer background beyond 
+    the browsers edge leaving no white space */
+    background-color: #9b8493;
+    border-top: 5px solid #9aaebb9a;
+    bottom: 0;
+    /* Positions the footer at the bottom of the screen */
+    font-size: 60px;
+}

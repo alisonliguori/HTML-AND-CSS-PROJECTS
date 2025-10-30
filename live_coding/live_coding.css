@@ -1,8 +1,12 @@
 /* Sets font for entire page */
 html{
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+.content-container{
+    margin-right: 15%;
+    margin-left: 15%;
+}
 /* NAV */
 /* Adds a black background color to the top navigation */
 .topnav {
@@ -10,7 +14,7 @@ html{
   background-color: #7b7485;
   margin-bottom: 18px;
   font-weight: bold;
-  font-size:large
+  font-size:x-large
 }
 
 
@@ -21,7 +25,7 @@ html{
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 25px;
 }
 
 /* Change the color of links on hover */
@@ -46,4 +50,20 @@ html{
 /* Paragraph only styling in info tiles */
 .info_tile p {
     text-align: justify;
+}
+
+/* Style rules for div that holds image and impact text */
+img{
+    float: right;
+}
+
+/* Styling the impact paragraph */
+#impact_para{
+    font-size: xx-large;
+    padding: 78px;
+}
+
+p{
+    padding: 25px;
+    font-size: x-large;
 }
